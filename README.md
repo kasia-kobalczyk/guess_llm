@@ -40,7 +40,7 @@ pip install -e .
 
 ## Step 1. Data Generation
 
-To create the synthetic datasets used in sections 3 and 4 run 
+To create the synthetic datasets used in sections 2 and 3 run 
 ```
 bash bin/synthetic_data_prep.sh
 ```
