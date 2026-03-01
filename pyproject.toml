@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "guess-llm"
+version = "0.1.0"
+description = "Official implementation for the Guess-LLM paper."
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = { file = "LICENSE" }
+authors = [
+  { name = "The Guess-LLM Authors" }
+]
+keywords = ["machine-learning", "llm", "time-series", "uncertainty"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
+
+dependencies = [
+  "numpy",
+  "torch",
+  "datasets==3.5.1",
+  "jax",
+  "lightning",
+  "pytorch-lightning",
+  "pandas",
+  "tqdm",
+  "hydra-core",
+  "omegaconf",
+  "wandb",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+  "mypy",
+]
+notebooks = [
+  "jupyter",
+  "matplotlib",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

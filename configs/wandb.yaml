@@ -1,0 +1,4 @@
+wandb: 
+  log: True
+  run_name_prefix: ${model.model_type}_${oc.select:model.target,""}/${dataset.name}_${replace:${replace:${dataset.split_file},/,_},'.csv',}/${dataset.model_name}/run_${now:%Y-%m-%d_%H-%M-%S}
+  project_name: guess_llm

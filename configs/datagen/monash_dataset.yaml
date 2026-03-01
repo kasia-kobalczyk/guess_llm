@@ -1,0 +1,20 @@
+dataset_name: monash_max_n_series_50_v2
+model_name: meta-llama/Llama-2-7b-hf
+random_seed: 42
+get_nll: False
+n_samples: 100
+n_samples_sensitivity: 1.0
+temp: 1.0
+top_p: 0.95 
+precision: 2
+devices_idx: [0, 1, 2, 3]
+time_series_func: 
+  _target_: guess_llm.datasets.get_monash_ts.get_monash
+  config:
+    n_repeat: 5
+    max_n_series: 50
+    random_seed: ${random_seed}
+    dataset_name: ${dataset_name}
+    precision: ${precision}
+
+# python -m guess_llm.datasets.get_llm_data --config-name=monash_dataset

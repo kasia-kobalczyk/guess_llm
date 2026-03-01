@@ -1,0 +1,16 @@
+random_seed: 42
+
+dataset:
+  name: multi_func_combined
+  model_name: Llama-2-7b-hf
+  split_file: balanced_1000.csv
+  hidden_states_list: [25, 26, 27, 28, 29, 30, 31, 32] 
+  batch_size: 1024
+  num_samples: 100
+
+defaults:
+  - model: quantile_mag_reg
+  - wandb
+
+model:
+  magnitudes: [-3, 4]

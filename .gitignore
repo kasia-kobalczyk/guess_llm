@@ -1,0 +1,5 @@
+data/*
+saves/*
+outputs/*
+bin/run_models.sh
+**__pycache__**

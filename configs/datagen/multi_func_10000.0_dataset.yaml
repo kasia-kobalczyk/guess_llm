@@ -1,0 +1,24 @@
+dataset_name: multi_func_scale_10000.0
+model_name: meta-llama/Llama-2-7b-hf
+random_seed: 42
+devices_idx: [0, 1, 2, 3]
+n_samples: 100
+n_samples_sensitivity: 0.9     
+precision: 1
+get_nll: False
+temp: 1.0
+top_p: 0.95
+time_series_func: 
+  _target_: guess_llm.datasets.get_multi_func_ts.get_time_series
+  config:
+    random_seed: ${random_seed}
+    dataset_name: ${dataset_name}
+    n_a: 10
+    n_repeat: 10
+    precision: ${precision}
+    max_vert_translation: 10000.0
+    max_vert_stretch: 10000.0
+    noise_list: [0.0, 0.01, 0.05, 0.1]
+    func_list: [random, sin, linear_sin, sinc, xsine, beat, gaussian_wave]
+
+    

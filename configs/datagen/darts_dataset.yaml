@@ -1,0 +1,19 @@
+dataset_name: darts_v1
+model_name: meta-llama/Llama-2-7b-hf
+random_seed: 42
+devices_idx: [0, 1, 2, 3]
+n_samples: 100
+n_samples_sensitivity: 0.9 
+temp: 1.0
+top_p: 0.95 
+precision: 2
+get_nll: False
+time_series_func: 
+  _target_: guess_llm.datasets.get_darts_ts.get_darts
+  config:
+    random_seed: ${random_seed}
+    dataset_name: ${dataset_name}
+    n_repeat: 20
+    precision: ${precision}
+
+# python -m guess_llm.datasets.get_llm_data --config-name=darts_dataset

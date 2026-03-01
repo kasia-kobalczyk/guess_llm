@@ -1,0 +1,22 @@
+model_type: mag_reg
+target: greedy
+hidden_states_list: ${dataset.hidden_states_list}
+agg_type: concat
+alpha: 100
+beta: 50
+use_arctan: False
+magnitudes: [-3, 5]
+lr: 1e-5
+log_scaling: False
+standard_scaling: False
+scheduler_step_size: 100
+scheduler_gamma: 0.5
+weight_decay: 1.0
+hidden_layers: 1
+hidden_dim: 512
+max_epochs: 600
+patience: 200
+devices: [0]
+training: separate
+type: separate
+topk: 3

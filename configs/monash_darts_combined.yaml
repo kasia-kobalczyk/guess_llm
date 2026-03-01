@@ -1,0 +1,17 @@
+random_seed: 42
+
+dataset:
+  name: monash_darts_combined
+  model_name: Llama-2-7b-hf
+  split_file: random_splits_filtered.csv
+  hidden_states_list: [25, 26, 27, 28, 29, 30, 31, 32] 
+  batch_size: 2048
+  num_samples: 100
+
+defaults:
+  - model: quantile_mag_reg
+  - wandb
+
+model:
+  max_epochs: 2000
+  magnitudes: [-4, 10]

@@ -1,0 +1,25 @@
+model_type: quantile_mag_reg
+quantiles: [0.025, 0.05, 0.25, 0.5, 0.75, 0.95, 0.975] #[0.025, 0.05, 0.25, 0.5, 0.75, 0.95, 0.975]
+magnitudes: [-4, 13]
+use_arctan: False 
+alpha: 100.0
+beta: 50.0
+quantile_weights: [1, 1, 1, 1, 1, 1, 1]
+hidden_states_list: ${dataset.hidden_states_list}
+log_scaling: False
+standard_scaling: False
+instance_normalization: False
+median_mse_lambda: 0
+agg_type: concat
+lr: 1e-5
+scheduler_step_size: 100
+scheduler_gamma: 0.5
+weight_decay: 0.1
+hidden_layers: 1
+hidden_dim: 512
+max_epochs: 500
+patience: 100                        # choose patience=0 for no early stopping
+devices: [0]
+training: joint
+type: separate
+topk: 3
