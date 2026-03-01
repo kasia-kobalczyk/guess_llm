@@ -1,5 +1,10 @@
 # Eliciting Numerical Predictive Distributions of LLMs Without Auto-Regression
 
+![Python](https://img.shields.io/badge/Python-3.10--3.12-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.10-red)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Paper](https://img.shields.io/badge/Paper-CC%20BY%204.0-orange)
+
 <img src="https://github.com/kasia-kobalczyk/guess_llm/blob/master/assets/featured.png?raw=true" width="800"/>
 
 
