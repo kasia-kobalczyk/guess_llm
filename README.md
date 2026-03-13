@@ -54,6 +54,9 @@ Note: External datasets are subject to their original licenses and are not cover
 
 By default, the datasets are generated with the `meta-llama/Llama-2-7b-hf` language model. This can be changed to other LLMs, e.g. `meta-llama/Meta-Llama-3-8B` or `microsoft/Phi-3.5-mini-instruct` by changing the `model_name` in the `.sh` scripts. 
 
+**Huggingface Dataset**: Scalar predcitions and pre-computed embeddings for the synthetic dataset (combination of all scales) are available at: [huggingface.co/datasets/jpiskorz/GuessLLM](https://huggingface.co/datasets/jpiskorz/GuessLLM/).
+The available models are: `Llama-2-7b-hf`, `Meta-Llama-3-8B`, `Llama-3.2-3B`, `Phi-3.5-mini-instruct` and `DeepSeek-R1-Distill-Llama-8B`
+
 ## Step 2. Model Training
 
 ### Estimation of Scalar Statistics (mean, median, greedy; paper Section 2)
