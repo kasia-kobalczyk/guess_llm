@@ -9,7 +9,7 @@
 
 
 ## Overview
-This repository contains the official implementation of the probing models presented in the ICLR 2026 paper [*Eliciting Numerical Predictive Distributions of LLMs Without Auto-Regression*](https://openreview.net/forum?id=jwzClhPT0j).
+This repository contains the official implementation of the probing models presented in the ICLR 2026 paper [*Eliciting Numerical Predictive Distributions of LLMs Without Auto-Regression*](https://openreview.net/pdf?id=SsuBd46twl).
 It provides code to:
 - Prepare synthetic and real-world datasets
 - Train probe models on LLM outputs
